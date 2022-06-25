@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3648AE6C28677FD0002A136A /* LazyNotesApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3648AE6A28677FD0002A136A /* LazyNotesApp.xcdatamodeld */; };
+		3684197C2812B45D00AA62F7 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3684197B2812B45D00AA62F7 /* UIView+Extension.swift */; };
+		3684197E2816BFA300AA62F7 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3684197D2816BFA300AA62F7 /* NoteViewController.swift */; };
+		36C3D249285DF7390031E47B /* NoteScreenState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C3D248285DF7390031E47B /* NoteScreenState.swift */; };
 		36EFFE7328085CB300CA7F09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EFFE7228085CB300CA7F09 /* AppDelegate.swift */; };
 		36EFFE7528085CB300CA7F09 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EFFE7428085CB300CA7F09 /* SceneDelegate.swift */; };
-		36EFFE7A28085CB300CA7F09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36EFFE7828085CB300CA7F09 /* Main.storyboard */; };
 		36EFFE7C28085CB300CA7F09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36EFFE7B28085CB300CA7F09 /* Assets.xcassets */; };
 		36EFFE7F28085CB300CA7F09 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36EFFE7D28085CB300CA7F09 /* LaunchScreen.storyboard */; };
 		36EFFE8728085CEE00CA7F09 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EFFE8628085CEE00CA7F09 /* NotesViewController.swift */; };
@@ -19,10 +22,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3648AE6B28677FD0002A136A /* LazyNotesApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LazyNotesApp.xcdatamodel; sourceTree = "<group>"; };
+		3684197B2812B45D00AA62F7 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		3684197D2816BFA300AA62F7 /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
+		36C3D248285DF7390031E47B /* NoteScreenState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteScreenState.swift; sourceTree = "<group>"; };
 		36EFFE6F28085CB300CA7F09 /* LazyNotesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LazyNotesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36EFFE7228085CB300CA7F09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36EFFE7428085CB300CA7F09 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		36EFFE7928085CB300CA7F09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		36EFFE7B28085CB300CA7F09 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		36EFFE7E28085CB300CA7F09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		36EFFE8028085CB300CA7F09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -43,6 +49,104 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3684197F281BE74900AA62F7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				36EFFE7228085CB300CA7F09 /* AppDelegate.swift */,
+				3648AE6A28677FD0002A136A /* LazyNotesApp.xcdatamodeld */,
+				36EFFE7428085CB300CA7F09 /* SceneDelegate.swift */,
+				36EFFE7B28085CB300CA7F09 /* Assets.xcassets */,
+				36EFFE7D28085CB300CA7F09 /* LaunchScreen.storyboard */,
+				36EFFE8028085CB300CA7F09 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		36841980281BE79A00AA62F7 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				36841981281BE7AC00AA62F7 /* NotesListScreen */,
+				36841983281BE7D000AA62F7 /* NoteScreen */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		36841981281BE7AC00AA62F7 /* NotesListScreen */ = {
+			isa = PBXGroup;
+			children = (
+				36841984281BE8B800AA62F7 /* Views */,
+				36841985281BE8DD00AA62F7 /* UIModels */,
+				36841986281BE8F800AA62F7 /* ViewController */,
+			);
+			path = NotesListScreen;
+			sourceTree = "<group>";
+		};
+		36841983281BE7D000AA62F7 /* NoteScreen */ = {
+			isa = PBXGroup;
+			children = (
+				36C3D24A285DF7710031E47B /* Model */,
+				36841987281BE92700AA62F7 /* ViewController */,
+			);
+			path = NoteScreen;
+			sourceTree = "<group>";
+		};
+		36841984281BE8B800AA62F7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				36EFFE8E2808601400CA7F09 /* NotesTableViewCell.swift */,
+				36EFFE8F2808601400CA7F09 /* NotesTableViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		36841985281BE8DD00AA62F7 /* UIModels */ = {
+			isa = PBXGroup;
+			children = (
+				36EFFE8828085D4A00CA7F09 /* NotesModel.swift */,
+			);
+			path = UIModels;
+			sourceTree = "<group>";
+		};
+		36841986281BE8F800AA62F7 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				36EFFE8628085CEE00CA7F09 /* NotesViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		36841987281BE92700AA62F7 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3684197D2816BFA300AA62F7 /* NoteViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		36841988281BE97200AA62F7 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				36841989281BE97A00AA62F7 /* Extensions */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		36841989281BE97A00AA62F7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3684197B2812B45D00AA62F7 /* UIView+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		36C3D24A285DF7710031E47B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				36C3D248285DF7390031E47B /* NoteScreenState.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		36EFFE6628085CB300CA7F09 = {
 			isa = PBXGroup;
 			children = (
@@ -62,16 +166,9 @@
 		36EFFE7128085CB300CA7F09 /* LazyNotesApp */ = {
 			isa = PBXGroup;
 			children = (
-				36EFFE7228085CB300CA7F09 /* AppDelegate.swift */,
-				36EFFE7428085CB300CA7F09 /* SceneDelegate.swift */,
-				36EFFE8628085CEE00CA7F09 /* NotesViewController.swift */,
-				36EFFE8E2808601400CA7F09 /* NotesTableViewCell.swift */,
-				36EFFE8F2808601400CA7F09 /* NotesTableViewCell.xib */,
-				36EFFE8828085D4A00CA7F09 /* NotesModel.swift */,
-				36EFFE7828085CB300CA7F09 /* Main.storyboard */,
-				36EFFE7B28085CB300CA7F09 /* Assets.xcassets */,
-				36EFFE7D28085CB300CA7F09 /* LaunchScreen.storyboard */,
-				36EFFE8028085CB300CA7F09 /* Info.plist */,
+				3684197F281BE74900AA62F7 /* Resources */,
+				36841988281BE97200AA62F7 /* Common */,
+				36841980281BE79A00AA62F7 /* Screens */,
 			);
 			path = LazyNotesApp;
 			sourceTree = "<group>";
@@ -136,7 +233,6 @@
 			files = (
 				36EFFE7F28085CB300CA7F09 /* LaunchScreen.storyboard in Resources */,
 				36EFFE7C28085CB300CA7F09 /* Assets.xcassets in Resources */,
-				36EFFE7A28085CB300CA7F09 /* Main.storyboard in Resources */,
 				36EFFE912808601400CA7F09 /* NotesTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -148,25 +244,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3684197C2812B45D00AA62F7 /* UIView+Extension.swift in Sources */,
+				3648AE6C28677FD0002A136A /* LazyNotesApp.xcdatamodeld in Sources */,
 				36EFFE8728085CEE00CA7F09 /* NotesViewController.swift in Sources */,
 				36EFFE7328085CB300CA7F09 /* AppDelegate.swift in Sources */,
 				36EFFE7528085CB300CA7F09 /* SceneDelegate.swift in Sources */,
 				36EFFE8928085D4A00CA7F09 /* NotesModel.swift in Sources */,
 				36EFFE902808601400CA7F09 /* NotesTableViewCell.swift in Sources */,
+				3684197E2816BFA300AA62F7 /* NoteViewController.swift in Sources */,
+				36C3D249285DF7390031E47B /* NoteScreenState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		36EFFE7828085CB300CA7F09 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				36EFFE7928085CB300CA7F09 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		36EFFE7D28085CB300CA7F09 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -303,13 +395,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = YQK8Z9V25M;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = LazyNotesApp/Info.plist;
+				INFOPLIST_FILE = LazyNotesApp/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -332,13 +424,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = YQK8Z9V25M;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = LazyNotesApp/Info.plist;
+				INFOPLIST_FILE = LazyNotesApp/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -374,6 +466,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3648AE6A28677FD0002A136A /* LazyNotesApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3648AE6B28677FD0002A136A /* LazyNotesApp.xcdatamodel */,
+			);
+			currentVersion = 3648AE6B28677FD0002A136A /* LazyNotesApp.xcdatamodel */;
+			path = LazyNotesApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 36EFFE6728085CB300CA7F09 /* Project object */;
 }
